@@ -1,87 +1,110 @@
-/* STYLING NAVBAR */
-/* #navbar a will style the links in the nav bar table */
-#nav_bar a {
-    text-decoration: none;
-    color: black;
-}
-
-/* making the text for hyperlinks change color when hovered over */
-#nav_bar a:hover {
-    color: lightcoral;
-}   
-
-/* making the navbar stay at the top of the screen */
-#nav_bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
+/* setting the background color */
 body {
-  padding-top: 60px;
+    background-color: lightblue;
 }
 
-/* STYLING THE PHOTO GALLERY */
-div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 365px;
-    box-sizing: border-box;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 15px;
-    text-align: center;
-  }
-
-/* STYLING FOOTER */
-footer {
-  position: fixed; /* footer's always on screen */
-  bottom: 0; /* at the bottom of the page */
-  width: 100%;
-  background-color: #e9e9e9;
-  text-align: center;
-  padding: 3px;
-  z-index: 1000; /* stays above other content */
+.container {
+    display: flex;
+    gap: 100px; 
+    margin: 200px 500px;
 }
 
-/* STYLING HOMEPAGE CONTENT (CENTERING + LESS WIDE) */
-.left_box, .right_box{
-  background-color: #cfe2ff;
-  width: 300px;
-  height: 100vh; /* https://www.w3schools.com/cssref/css_units.php */
-  position: fixed; 
-  top: 0; 
-  z-index: 1;; /* https://www.w3schools.com/cssref/pr_pos_z-index.php */
+/* styling the div called box */
+.box {
+    background-color: lightsalmon;
+    width: 200px;
+    height: 200px;
+
+    /* defining the animation of the box */
+    animation-name: square-to-circle;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
 }
 
-.left_box{
-  left: 0;
+/* actually playing the animation */
+@keyframes square-to-circle {
+    /* at key frame 0 (where the box starts)... */
+    0% {
+        border-radius: 0;
+        background-color: darksalmon;
+        transform: rotate(0deg);
+    }
+
+    /* at key frame 25%... */
+    25% {
+        /* rounding the top leftcorner */
+        border-radius: 50% 0 0 0;
+        background-color: salmon;
+        transform: rotate(-45deg);
+    }
+
+    /* at key frame 50%... */
+    50% {
+        border-radius: 50% 50% 0 0;
+        background-color: lightcoral;
+        transform: rotate(-90deg);
+    }
+
+    /* at key frame 75%... */
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background-color: lightpink;
+        transform: rotate(-135deg);
+    }
+
+    /* at key frame 100% */
+    100% {
+        border-radius: 50%;
+        background-color: lightsalmon;
+        transform: rotate(-180deg);
+    }
 }
 
-.right_box{
-  right: 0
+/* styling the div called box2 */
+.box2 {
+    background-color: lavender;
+    width: 200px;
+    height: 200px;
+    animation-name: opposite-square-to-circle;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
 }
 
-.content{
-  max-width: calc(100% - 600px);
-  margin: 0 auto;
-  background-color: white;
-  padding: 20px
-}
+/* actually playing the animation */
+@keyframes opposite-square-to-circle {
+    0% {
+        border-radius: 0;
+        background-color: plum;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 0 0 0 50%;
+        background-color: lavenderblush;
+        transform: rotate(45deg);
+    }
+    50% {
+        border-radius: 0 0 50% 50%;
+        background-color: violet;
+        transform: rotate(90deg);
+    }
 
-/* CENTERING CLEO'S INSTAGRAM ACCOUNT */
-.cleo_ig{
-  margin: auto;
-  width: 50%;
+    /* at key frame 75%... */
+    75% {
+        border-radius: 0 50% 50% 50%;
+        background-color: thistle;
+        transform: rotate(135deg);
+    }
+
+    /* at key frame 100% */
+    100% {
+        border-radius: 50%;
+        background-color: plum;
+        transform: rotate(180deg);
+    }
 }

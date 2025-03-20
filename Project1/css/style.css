@@ -1,0 +1,134 @@
+/* STYLING NAVBAR */
+/* #navbar a will style the links in the nav bar table */
+#nav_bar a {
+    text-decoration: none;
+    color: black;
+}
+
+/* making the text for hyperlinks change color when hovered over */
+#nav_bar a:hover {
+    color: lightcoral;
+}   
+
+/* making the navbar stay at the top of the screen */
+#nav_bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 60px;
+}
+
+/* STYLING THE PHOTO GALLERY */
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 365px;
+    box-sizing: border-box;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+/* STYLING FOOTER */
+footer {
+  position: fixed; /* footer's always on screen */
+  bottom: 0; /* at the bottom of the page */
+  width: 100%;
+  background-color: #e9e9e9;
+  text-align: center;
+  padding: 3px;
+  z-index: 1000; /* stays above other content */
+}
+
+/* STYLING HOMEPAGE CONTENT (CENTERING + LESS WIDE) */
+.left_box, .right_box{
+  background-color: #cfe2ff;
+  width: 300px;
+  height: 100vh; /* https://www.w3schools.com/cssref/css_units.php */
+  position: fixed; 
+  top: 0; 
+  z-index: 1;; /* https://www.w3schools.com/cssref/pr_pos_z-index.php */
+}
+
+.left_box{
+  left: 0;
+}
+
+.right_box{
+  right: 0
+}
+
+.content{
+  max-width: calc(100% - 600px);
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px
+}
+
+/* CENTERING CLEO'S INSTAGRAM ACCOUNT */
+.cleo_ig{
+  margin: auto;
+  width: 50%;
+}
+
+/* STYLING THE MILESTONES CONTAINER */
+.milestones {
+  max-width: calc(100% - 500px);
+  margin: 0 auto;
+  background-color: rgb(224, 239, 255);
+  padding: 10px;
+  display: flex; /* https://www.w3schools.com/css/css3_flexbox_container.asp */
+  flex-direction: row;
+  align-items: center;
+  gap: -100px;
+  align-content: space-evenly;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.left_table {
+  text-align: left;
+  flex: 4;
+  margin-left: -220px;
+  margin-right: -170px;
+}
+
+.image_right {
+  flex: 1;
+  border: 2px solid lightsteelblue;
+  border-radius: 10px;
+  margin-right: 40px;
+  margin-left: -50px;
+  padding: 20px;
+  background-color: lightsteelblue;
+}
+
+/* STYLING OVERVIEW INFO ON THE GET TO KNOW CLEO PAGE */
+.overview_info {
+  max-width: calc(100% - 500px);
+  background-color: lightsteelblue;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 15px
+}
+
+/* PICKING A FONT symtax: * selects all - https://www.w3schools.com/css/css_selectors.asp */
+* {
+  font-family:'Times New Roman', Times, serif
+}
