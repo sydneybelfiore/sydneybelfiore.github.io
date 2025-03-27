@@ -1,5 +1,6 @@
 
-/* I learned this from CS50 */
+// USING JAVASCRIPT TO PROGRAM MY CLEO QUIZ ON THE HOMEPAGE
+// I learned this from CS50
 document.addEventListener('DOMContentLoaded', function() {
 
     // Get all elements with class "correct"
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < corrects.length; i++) {
         corrects[i].addEventListener('click', function() {
 
-            // Set background color to green
+            // Set background color to green so user knows they selected the right answer
             corrects[i].style.backgroundColor = 'Green';
 
             // Go to parent element of correct button and find the first element with class "feedback" which has that parent
@@ -29,16 +30,4 @@ document.addEventListener('DOMContentLoaded', function() {
             incorrects[i].parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
         });
     }
-
-    // Check free response submission
-    document.querySelector('#check').addEventListener('click', function() {
-        let input = document.querySelector('input');
-        if (input.value === 'Avatar') {
-            input.style.backgroundColor = 'green';
-            input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
-        } else {
-            input.style.backgroundColor = 'red';
-            input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
-        }
-    });
 });

@@ -1,16 +1,22 @@
-/* STYLING NAVBAR */
-/* #navbar a will style the links in the nav bar table */
-#nav_bar a {
+/* ------------ PICKING A FONT ----------- */ 
+/* syntax note: * selects all - https://www.w3schools.com/css/css_selectors.asp */
+* {
+  font-family:'Times New Roman', Times, serif
+}
+
+/* ---------- STYLING NAVBAR ------------- */
+/* navbar for gallery and get to know Cleo pages */
+#nav_bar a { /* #navbar a will style the links in the nav bar table */
     text-decoration: none;
     color: black;
 }
 
 /* making the text for hyperlinks change color when hovered over */
 #nav_bar a:hover {
-    color: lightcoral;
+    color: lightcyan;
 }   
 
-/* making the navbar stay at the top of the screen */
+/* making the navbar stay at the top of the screen - learned this here: https://www.w3schools.com/css/css_navbar_horizontal.asp */
 #nav_bar {
   position: fixed;
   top: 0;
@@ -18,18 +24,82 @@
   z-index: 1000;
 }
 
-body {
-  padding-top: 60px;
+/* navbar for homepage */
+#nav_home a { /* #navbar a will style the links in the nav bar table */
+  text-decoration: none;
+  color: black;
 }
 
-/* STYLING THE PHOTO GALLERY */
-.gallery_row {
+#nav_home a:hover {
+  color: lightcyan;
+}  
+
+
+/* ----------- STYLING FOOTER ----------------- */
+footer {
+  position: fixed; /* footer's always on screen */
+  bottom: 0; /* at the bottom of the page */
+  width: 100%;
+  background-color: #e9e9e9;
+  text-align: center;
+  padding: 3px;
+  z-index: 1; /* stays above other content, learned here: https://www.w3schools.com/cssref/pr_pos_z-index.php */
+}
+
+
+/* ------------ HOMEPAGE CSS ------------------ */
+/* STYLING MAIN IMAGE ON HOMEPAGE */
+.home_img {
+  padding: 0;
+  margin: 0;
+}
+
+/* styling the content container to be white and in the center of the page */
+.content{
+  max-width: 62%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  z-index: 1; /* making sure this sits ontop of the light blue background */
+  margin-top: -16px; /* making sure the white content box is right below the navbar without any space in between */
+}
+
+/* CONTAINTER FOR CLEO'S INSTAGRAM AND GOOGLE MAPS */
+/* using flex boses to make the instagram post and google maps embed side by side */
+.ig_maps_container { 
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* CENTERING CLEO'S INSTAGRAM ACCOUNT (left part of container) */
+.cleo_ig{
+  margin: 0;
+  width: 49%;
+}
+
+/* CENTERING GOOGLE MAPS (right part of container) */
+.google_maps{
+  margin: 0;
+  width: 49%;
+}
+
+/* STYLING THE CONTAINER WITH THE JS CLEO QUIZ */
+.cleo_quiz {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+/* ------------------- GALLERY PAGE CSS ------------------ */
+/* STYLING THE PHOTO GALLERY - learned from w3schools: https://www.w3schools.com/css/css3_flexbox_responsive.asp */
+.gallery_row { /*using flexboxes */
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create four equal columns with images that sits next to each other */
 .gallery_column {
   flex: 25%;
   max-width: 25%;
@@ -52,107 +122,55 @@ body {
   }
 }
 
+/* styling the images themselves */
 .gallery_column img {
   margin-top: 8px;
   vertical-align: middle;
 }
 
-.gallery_item:hover {
-  border: 1px solid #777;
+/* making the image slightly opaque when hovered on */
+.gallery_column img:hover {
+  opacity: 75%;
 }
 
+/* styling the image descriptions */
 .desc {
   padding: 15px;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-/* STYLING FOOTER */
-footer {
-  position: fixed; /* footer's always on screen */
-  bottom: 0; /* at the bottom of the page */
-  width: 100%;
-  background-color: #e9e9e9;
-  text-align: center;
-  padding: 3px;
-  z-index: 1000; /* stays above other content */
-}
 
-/* STYLING HOMEPAGE CONTENT (CENTERING + LESS WIDE) */
-.left_box, .right_box{
-  background-color: #cfe2ff;
-  width: 275px;
-  height: 100vh; /* https://www.w3schools.com/cssref/css_units.php */
-  position: fixed; 
-  top: 0; 
-  z-index: 1;; /* https://www.w3schools.com/cssref/pr_pos_z-index.php */
-}
-
-.left_box{
-  left: 0;
-}
-
-.right_box{
-  right: 0
-}
-
-.content{
-  max-width: calc(100% - 550px);
+/* ----------------- GET TO KNOW CLEO PAGE CSS ------------------- */
+/* STYLING OVERVIEW INFO ON THE GET TO KNOW CLEO PAGE */
+.overview_info {
+  max-width: 66%;
+  background-color: lightsteelblue;
+  border-radius: 15px;
   margin: 0 auto;
-  background-color: white;
-  padding: 20px;
+  padding: 15px
 }
 
-/* CONTAINTER FOR CLEO'S INSTAGRAM AND GOOGLE MAPS */
-.ig_maps_container {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  background-color: lightgray;
-}
-
-/* CENTERING CLEO'S INSTAGRAM ACCOUNT */
-.cleo_ig{
-  margin: 0;
-  width: 48%;
-}
-
-/* CENTERING GOOGLE MAPS */
-.google_maps{
-  margin: 0;
-  width: 48%;
-}
-
-/* STYLING THE CONTAINER WITH THE JS CLEO QUIZ */
-.cleo_quiz {
-  max-width: calc(100% - 550px);
-  margin: 0 auto;
-  padding: 20px;
-  flex: none;
-  display: block;
-}
-
-/* STYLING THE MILESTONES CONTAINER */
+/* STYLING THE MILESTONES CONTAINER using flexboses */
 .milestones {
-  max-width: calc(100% - 500px);
+  max-width: 66%;
   margin: 0 auto;
   background-color: rgb(224, 239, 255);
   padding: 10px;
   display: flex; /* https://www.w3schools.com/css/css3_flexbox_container.asp */
-  flex-direction: row;
   align-items: center;
-  gap: -100px;
-  align-content: space-evenly;
-  justify-content: center;
   border-radius: 15px;
 }
 
+/* styling the milestones table itself */
 .left_table {
   text-align: left;
-  flex: 4;
-  margin-left: -220px;
-  margin-right: -170px;
+  flex: 3;
+  margin-left: -10%;
 }
 
+/* styling the image to the right of the milestones table */
 .image_right {
   flex: 1;
   border: 2px solid lightsteelblue;
@@ -162,17 +180,49 @@ footer {
   padding: 20px;
   background-color: lightsteelblue;
 }
-
-/* STYLING OVERVIEW INFO ON THE GET TO KNOW CLEO PAGE */
-.overview_info {
-  max-width: calc(100% - 500px);
+/* SYTLING THE FAVORITES LIST */
+.favorites {
+  max-width: 66%;
   background-color: lightsteelblue;
   border-radius: 15px;
   margin: 0 auto;
-  padding: 15px
+  padding: 15px;
 }
 
-/* PICKING A FONT symtax: * selects all - https://www.w3schools.com/css/css_selectors.asp */
-* {
-  font-family:'Times New Roman', Times, serif
+/* making the favorites header above the flexbox so it's centered and above the lists themselves */
+.favorites-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* initiating the flexboxes */
+.favorites-content {
+  display: flex;
+}
+
+/* styling the FOOD, TOYBS, and ACTIVITIES lists so they each take up a third of the row */
+.food {
+  margin: 0;
+  width: 32%;
+  display: inline-block; /* learned about inline blocks here: https://www.w3schools.com/Css/css_inline-block.asp */
+  text-align: center;
+}
+
+.toys {
+  margin: 0;
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+}
+
+.activities {
+  margin: 0;
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+}
+
+/* ensuring the bullet points themselves are still left aligned */
+.favorites-content ul, ol{
+  list-style-position: inside; 
 }

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
 
+    <!--page icon (little iamge in the browser tab)-->
+    <link rel="icon" type="image/x-icon" href="images/cleoicon.jpg"> 
+
     <!-- link to stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -13,17 +16,10 @@
     
     <!--making my website good more laptops and phones - learned this with CS50 -->
     <meta name="viewport" content="initial-scale=1, width=device-width">
-
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-
 </head>
-<body>
+
+
+<body style="padding-top: 60px;"> <!--adding padding to the body so the navbar doesn't overlap with it-->
   <!-- NAVBAR -->
   <div>
       <!--creating a table that will be the navigation bar at the top of my screen and using bootstrap-->
@@ -47,11 +43,13 @@
   </div>
 
   <!--PHOTO GALLERY-->
-  <!-- I USED W3SCHOOLS TO USE RESPONSIVE FLEXBOXES: https://www.w3schools.com/css/css3_flexbox_responsive.asp-->
+  <!--i used W3Schools to learn about flexboxes and create a responsive layout: https://www.w3schools.com/css/css3_flexbox_responsive.asp-->
   <div class="gallery_row">
+
+    <!--first column of images (leftest column on the screen)-->
     <div class="gallery_column">
       <img src="images\cleo1.jpg" alt="Cleo Sledding" style="width: 100%;">
-      <div class="desc">Cleo Sledding</div>
+      <div class="desc">Cleo Sledding</div> <!--adding an iamge description right below the image-->
 
       <img src="images\cleo2.jpg" alt="Cleo in the Snow" style="width: 100%;">
       <div class="desc">Cleo in the Snow</div>
@@ -60,7 +58,7 @@
       <div class="desc">Baby Cleo</div>
 
       <img src="images\cleo5.jpg" alt="Hiking Cleo" style="width: 100%;">
-      <div class="desc">Hiking Cleo</div>
+      <div class="desc">Hiking Cleo</div> 
 
       <img src="images\cleo6.jpg" alt="Cleo playing the Piano" style="width: 100%;">
       <div class="desc">Cleo the Musician</div>
@@ -72,9 +70,13 @@
       <div class="desc">Cleo Catches a Strawberry</div>
     </div>
 
+    <!--second column of images (left middle column on the screen)-->
     <div class="gallery_column">
       <img src="images\cleo8.jpg" alt="Cleo at the Mall" style="width: 100%;">
       <div class="desc">Cleo at the Mall</div>
+
+      <img src="images\cleo29.jpg" alt="Cleo as a Puppy" style="width: 100%;">
+      <div class="desc">Cleo the Puppy</div>
 
       <img src="images\cleo9.jpg" alt="Cleo at the Tulip Fields" style="width: 100%;">
       <div class="desc">Cleo at the Tulip Fields</div>
@@ -90,8 +92,13 @@
 
       <img src="images\cleo27.jpg" alt="Cleo Plays Guitar" style="width: 100%;">
       <div class="desc">Cleo plays Guitar</div>
+    </div>
 
+    <!--third column of images (right middle column on the screen)-->
     <div class="gallery_column">
+      <img src="images\cleo30.jpg" alt="Wet Cleo" style="width: 100%;">
+      <div class="desc">Wet Cleo</div>
+
       <img src="images\cleo13.jpg" alt="Cleo Sleeping" style="width: 100%;">
       <div class="desc">Cleo Sleeping</div>
 
@@ -104,16 +111,17 @@
       <img src="images\cleo16.jpg" alt="Cleo Catching a Frisbee" style="width: 100%;">
       <div class="desc">Frisbee!</div>
 
+      <img src="images\cleo31.jpg" alt="Cleo on my Shoulders" style="width: 100%;">
+      <div class="desc">Cleo on my Shoulders</div>
+
       <img src="images\cleo18.jpg" alt="Cleo Rips Apart her Toy" style="width: 100%;">
       <div class="desc">Cleo Breaks her Toy :(</div>
-
-      <img src="images\cleo19.jpg" alt="Cleo gets Belly Rubs" style="width: 100%;">
-      <div class="desc">Belly Rubs!</div>
 
       <img src="images\cleo4.jpg" alt="Puppy Cleo" style="width: 100%;">
       <div class="desc">Puppy Cleo</div>
     </div>
 
+    <!--fourth column of images (far right column on the screen)-->
     <div class="gallery_column">
       <img src="images\cleo20.jpg" alt="Cleo Smiling" style="width: 100%;">
       <div class="desc">Smiley Pup</div>
@@ -124,9 +132,7 @@
       <img src="images\cleo22.jpg" alt="Cleo on on a Scooter" style="width: 100%;">
       <div class="desc">Cleo on the Scooter</div>
 
-      <a target="_blank" href="images\cleo10.jpg">
-        <img src="images\cleo10.jpg" alt="Cleo's Tongue" style="width: 100%;">
-      </a>
+      <img src="images\cleo10.jpg" alt="Cleo's Tongue" style="width: 100%;">
       <div class="desc">Cleo's Tongue</div>
 
       <img src="images\cleo24.jpg" alt="Cleo Catches a Ball" style="width: 100%;">
@@ -134,13 +140,17 @@
 
       <img src="images\cleo26.jpg" alt="Cleo gives Snuggles" style="width: 100%;">
       <div class="desc">Cleo's Snuggles</div>
+    
+      <img src="images\cleo19.jpg" alt="Cleo gets Belly Rubs" style="width: 100%;">
+      <div class="desc">Belly Rubs!</div>
     </div>
   </div>
 
-<p style="color: white;">BLANK SPACE</p>
-<p style="color: white;">BLANK SPACE</p>
-<p>  </p>
-
+  <!--adding breaks to the footer doesn't overlap with the bottom-most images-->
+  <br>
+  <br>
+  <br>
+  <br>
 
   <!--FOOTER-->
   <footer class="footer">
